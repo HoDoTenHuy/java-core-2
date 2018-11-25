@@ -56,9 +56,10 @@ public class Vehicle {
         this.triGia = triGia;
     }
 
-    public Vehicle(){
+    public Vehicle() {
     }
-    public void nhapThongTin(Scanner sc){
+
+    public void nhapThongTin(Scanner sc) {
         Vehicle vehicle = new Vehicle();
         sc.nextLine();
         System.out.println("Ho Ten Chu Xe : ");
@@ -74,20 +75,20 @@ public class Vehicle {
         //this.triGia = sc.nextInt();
         setTriGia(sc.nextInt());
     }
-    protected int thueXePhaiNop(int dungTich){
-        if(0 < dungTich && dungTich < 100){
-            return this.triGia/100;
+
+    protected int thueXePhaiNop(int dungTich) {
+        if (0 < dungTich && dungTich < 100) {
+            return this.triGia / 100;
         }
-        if(100 <= dungTich && dungTich < 200){
-            return this.triGia*3/100;
-        }
-        else
-            return this.triGia*5/100;
+        if (100 <= dungTich && dungTich < 200) {
+            return this.triGia * 3 / 100;
+        } else
+            return this.triGia * 5 / 100;
     }
 
-    public void xuatThongTin(){
+    public void xuatThongTin() {
         System.out.println(getTenChuXe() + "\t\t\t" + getLoaiXe() + "\t\t\t" + getDungTich() + "\t\t\t"
-        + getTriGia() + "\t\t\t" + thueXePhaiNop(getDungTich()) + "\n");
+                + getTriGia() + "\t\t\t" + thueXePhaiNop(getDungTich()) + "\n");
         /*return getTenChuXe() + "\t\t\t" + getLoaiXe() + "\t\t\t" + getDungTich() + "\t\t\t"
         + getTriGia() + "\t\t\t" + thueXePhaiNop(getDungTich()) + "\n";*/
 
